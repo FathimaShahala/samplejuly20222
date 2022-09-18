@@ -1,23 +1,22 @@
-
-//using super function
-
 import 'dart:io';
 
 class GrandFather{
-  String name = "Shastri";
+  String name = "Paul";
 }
-class Father extends GrandFather{
-  @override
-  late String name;
-}
-void dispaly(){
-  stdout.write(" ${name = "Bahadur"} ${super.name}");
+class Father extends GrandFather {
+
+  late String name ;
+
+  void display(){
+    stdout.write(" ${name= "John"} ${super.name}");
+  }
 }
 class Son extends Father{
-  String name = "Lal";
+  @override
+  String name = "Martin";
 }
 void main(){
   Son obj = Son();
- stdout.write(obj.name);
- obj.display();
+  stdout.write(obj.name);
+  obj.display();
 }
